@@ -1,0 +1,7 @@
+r = ""
+while True:
+    a = input("Введите слово: ")
+    if a == "стоп":
+        break
+    r += a + " "
+print(r)
