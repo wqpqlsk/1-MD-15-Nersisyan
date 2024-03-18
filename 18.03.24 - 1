@@ -1,0 +1,8 @@
+a = int(input("Введите число: "))
+def mod(a):
+    if a % 3 == 0:
+        return "Число делится на 3"
+    else:
+        return "Число не делится на 3"
+b = mod(a)
+print(b)
