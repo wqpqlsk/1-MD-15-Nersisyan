@@ -1,6 +1,0 @@
-a = int(input("Введите количество слов: "))
-r =""
-for i in range(a):
-     n = input("Введите слово: ")
-     r += n + " "
-     print(r)
