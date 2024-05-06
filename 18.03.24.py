@@ -22,16 +22,13 @@ def a2():
         print("Ошибка. Деление на ноль")
 a2()
 
-def a3():
-    day = int(input("Введите число: "))
-    month = int(input("Введите месяц: "))
-    year = int(input("Введите год: "))
-    def a(day, month, year):
-        b = day * month
-        if b == int(str(year)[-2:]):
-            print("Дата магическая")
-        else:
-            print("Дата отстой")
-
-    print(a(day, month, year))
-a3()
+day = int(input("Введите число: "))
+month = int(input("Введите месяц: "))
+year = int(input("Введите год: "))
+def a(day, month, year):
+    b = day * month
+    if b == int(str(year)[-2:]):
+        print("Дата магическая")
+    else:
+        print("Дата отстой")
+print(a(day, month, year))
