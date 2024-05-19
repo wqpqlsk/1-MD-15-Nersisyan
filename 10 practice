@@ -1,0 +1,29 @@
+import os
+import json
+def num1-2():
+    with open("lab10.json", mode="r", encoding='utf8') as file:
+        a = json.load(file)
+        b = (a['products'])
+        for i in range(3):
+            print("Название", b[i]['name'])
+            print("Цена", b[i]['price'])
+            print("Вес", b[i]['weight'])
+            if b[i]['available'] == True:
+                print("В наличии")
+            else:
+                print("Нет в наличии!")
+
+def num3():
+    v = {}
+    with open("блокнот.txt", mode="r", encoding='utf8') as file:
+        l = file.read().splitlines()
+        for l1 in l:
+            key, value = line1.strip().split(' - ')
+            v.update({key:value})
+    print(v)
+
+    with open('ru-en.txt', 'w', encoding='utf-8') as f:
+        for ru_word, en_word in sorted(v.items()):
+            f.write(f'{ru_word} - {en_word}\n')
+    print(v)
+num3()
