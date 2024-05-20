@@ -1,0 +1,68 @@
+def rest():
+    class Restaurant:
+        def __init__(self, restaurant_name, cuisine_type, rating=0):
+            self.restaurant_name = restaurant_name
+            self.cuisine_type = cuisine_type
+            self.rating = rating
+
+        def describe_restaurant(self):
+            print(f"Ресторан {self.restaurant_name} специализируется на {self.cuisine_type} кухне Рейтинг: {self.rating} ")
+
+        def open_restaurant(self):
+            print(f"Ресторан {self.restaurant_name} открыт!")
+
+        def up_rating(self, new_rating):
+            if 0 <= new_rating <= 5:
+                self.rating = new_rating
+                print(f"Рейтинг ресторана {self.restaurant_name} обновлен! Новый рейтинг: {self.rating}")
+            else:
+                print("Рейтинг только от 0 до 5")
+    class IceCreamStand(Restaurant):
+        def __init__(self, name, flavors, location, time):
+            self.cafe_name = name
+            self.flavors =flavors
+            self.location = location
+            self.time= time
+        def f(self):
+            print("Доступные виды мороженного: ")
+            for flavor in self.flavors:
+                print(flavor)
+
+        def addflavor(self, newflavor):
+            if newflavor not in self.flavors:
+                self.flavors.append(newflavor)
+                print(f"{newflavor} добавлен")
+            else:
+                print(f"{newflavor} уже есть")
+
+        def rem(self,flavor):
+            if flavor in self.flavors:
+                self.flavors.remove(flavor)
+                print(f"{flavor} вкус удален")
+            else:
+                print(f"{flavor} нет в списке")
+
+        def nalichie(self,flavor):
+            if flavor in self.flavors:
+                print(f"{flavor} в наличии")
+            else:
+                print(f"{flavor} нет в наличии")
+
+        def typeice(self):
+            print("Мороженное на палочке")
+        def typeice2(self):
+            print("Мягкое мороженное")
+
+        def ff(self):
+            print("Доступные виды мороженного: ")
+            for flavor in self.flavors:
+                print(flavor)
+
+    cafe = IceCreamStand("Кафе-мороженое", ["Vanila",'Pistachio','Brulee'],"Belgorod", "10.00 - 22.00")
+    cafe.f()
+    cafe.nalichie("Pistachio")
+    cafe.addflavor('Citric')
+    cafe.rem('Brulee')
+    cafe.typeice()
+    cafe.ff()
+rest()
